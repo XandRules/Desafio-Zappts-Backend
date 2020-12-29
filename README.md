@@ -22,3 +22,5 @@ yarn server
 yarn seed
 ```
 ## O usuário padrão é santa e a senha 123456
+
+## A Api pode ser acessada em : https://zappts-api.herokuapp.com/
