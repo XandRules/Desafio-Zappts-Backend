@@ -30,6 +30,21 @@ class UserController {
 
     let newUser = null;
 
+    const validRole = ['Santa', 'Child'];
+    let isValid = false
+
+    for (const role of validRole) {
+      if(req.body.role === role){
+        isValid = true
+      }
+    }
+
+    if(!isValid){
+      return res.json({
+        message: 'O perfil do usuário não é valido'
+      })
+    }
+
     try {
       console.log(req.body);
       const password_hash =  await bcrypt.hash(req.body.password, 8);
